@@ -108,4 +108,25 @@ class GameScene: SKScene {
 		}
 	}
 
+	func checkTouches(_ touches: Set<UITouch>) {
+		guard let touch = touches.first else { return }
+
+		let location = touch.location(in: self)
+		let nodesAtPoint = nodes(at: location)
+
+		for case let node as SKSpriteNode in nodesAtPoint {
+			guard node.name == "firework" else { return }
+			for parent in fireworks {
+				guard let firework = parent.children.first as? SKSpriteNode else { continue }
+				if firework.name == "selected" && firework.color != node.color {
+					firework.name = "firework"
+					firework.colorBlendFactor = 1
+				}
+			}
+			node.name = "selected"
+			node.colorBlendFactor = 0
+		}
+
+	}
+
 }
