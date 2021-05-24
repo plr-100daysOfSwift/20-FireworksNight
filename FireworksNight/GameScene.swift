@@ -9,8 +9,30 @@ import SpriteKit
 
 
 class GameScene: SKScene {
-    
-    override func didMove(to view: SKView) {
 
+	var gameTimer: Timer?
+	var fireworks = [SKNode]()
+
+	let leftEdge = -22
+	let rightEdge = 1024 + 22
+	let bottomEdge = -22
+
+	var score = 0 {
+		didSet {
+			
 		}
+	}
+
+	override func didMove(to view: SKView) {
+
+	}
+
+	@objc func launchFireworks(xMovement: CGFloat, x: Int, y: Int) {
+		//
+	}
+
+	func createFirework() {
+		//
+	}
+
 }
