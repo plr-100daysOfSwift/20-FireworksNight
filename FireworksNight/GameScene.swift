@@ -19,7 +19,7 @@ class GameScene: SKScene {
 
 	var score = 0 {
 		didSet {
-			
+
 		}
 	}
 
@@ -30,6 +30,7 @@ class GameScene: SKScene {
 		background.zPosition = -1
 		addChild(background)
 
+		gameTimer = Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(launchFireworks), userInfo: nil, repeats: true)
 
 	}
 
