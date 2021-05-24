@@ -9,23 +9,27 @@
 /* Begin PBXBuildFile section */
 		DACA07F4265C56BD000FDC58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACA07F3265C56BD000FDC58 /* AppDelegate.swift */; };
 		DACA07F6265C56BD000FDC58 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DACA07F5265C56BD000FDC58 /* GameScene.sks */; };
-		DACA07F8265C56BD000FDC58 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = DACA07F7265C56BD000FDC58 /* Actions.sks */; };
 		DACA07FA265C56BD000FDC58 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACA07F9265C56BD000FDC58 /* GameScene.swift */; };
 		DACA07FC265C56BD000FDC58 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACA07FB265C56BD000FDC58 /* GameViewController.swift */; };
 		DACA07FF265C56BD000FDC58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACA07FD265C56BD000FDC58 /* Main.storyboard */; };
 		DACA0801265C56C0000FDC58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACA0800265C56C0000FDC58 /* Assets.xcassets */; };
+		DACA080A265C571D000FDC58 /* fuse.sks in Resources */ = {isa = PBXBuildFile; fileRef = DACA0808265C571D000FDC58 /* fuse.sks */; };
+		DACA080B265C571D000FDC58 /* explode.sks in Resources */ = {isa = PBXBuildFile; fileRef = DACA0809265C571D000FDC58 /* explode.sks */; };
+		DACA080D265C5749000FDC58 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DACA080C265C5749000FDC58 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DACA07F0265C56BD000FDC58 /* FireworksNight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireworksNight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACA07F3265C56BD000FDC58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DACA07F5265C56BD000FDC58 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		DACA07F7265C56BD000FDC58 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		DACA07F9265C56BD000FDC58 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		DACA07FB265C56BD000FDC58 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		DACA07FE265C56BD000FDC58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DACA0800265C56C0000FDC58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DACA0802265C56C0000FDC58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DACA0808265C571D000FDC58 /* fuse.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = fuse.sks; sourceTree = "<group>"; };
+		DACA0809265C571D000FDC58 /* explode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explode.sks; sourceTree = "<group>"; };
+		DACA080C265C5749000FDC58 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 		DACA07E7265C56BD000FDC58 = {
 			isa = PBXGroup;
 			children = (
+				DACA080C265C5749000FDC58 /* README.md */,
 				DACA07F2265C56BD000FDC58 /* FireworksNight */,
 				DACA07F1265C56BD000FDC58 /* Products */,
 			);
@@ -60,12 +65,13 @@
 			children = (
 				DACA07F3265C56BD000FDC58 /* AppDelegate.swift */,
 				DACA07F5265C56BD000FDC58 /* GameScene.sks */,
-				DACA07F7265C56BD000FDC58 /* Actions.sks */,
 				DACA07F9265C56BD000FDC58 /* GameScene.swift */,
 				DACA07FB265C56BD000FDC58 /* GameViewController.swift */,
 				DACA07FD265C56BD000FDC58 /* Main.storyboard */,
 				DACA0800265C56C0000FDC58 /* Assets.xcassets */,
 				DACA0802265C56C0000FDC58 /* Info.plist */,
+				DACA0809265C571D000FDC58 /* explode.sks */,
+				DACA0808265C571D000FDC58 /* fuse.sks */,
 			);
 			path = FireworksNight;
 			sourceTree = "<group>";
@@ -127,10 +133,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACA080D265C5749000FDC58 /* README.md in Resources */,
 				DACA07FF265C56BD000FDC58 /* Main.storyboard in Resources */,
 				DACA07F6265C56BD000FDC58 /* GameScene.sks in Resources */,
+				DACA080A265C571D000FDC58 /* fuse.sks in Resources */,
+				DACA080B265C571D000FDC58 /* explode.sks in Resources */,
 				DACA0801265C56C0000FDC58 /* Assets.xcassets in Resources */,
-				DACA07F8265C56BD000FDC58 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +300,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.plrichardson.FireworksNight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -311,7 +319,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.plrichardson.FireworksNight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
