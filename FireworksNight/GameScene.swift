@@ -129,4 +129,14 @@ class GameScene: SKScene {
 
 	}
 
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		super.touchesBegan(touches, with: event)
+		checkTouches(touches)
+	}
+
+	override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+		super.touchesMoved(touches, with: event)
+		checkTouches(touches)
+	}
+
 }
