@@ -34,8 +34,41 @@ class GameScene: SKScene {
 
 	}
 
-	@objc func launchFireworks(xMovement: CGFloat, x: Int, y: Int) {
-		//
+	func createFirework(xMovement: CGFloat, x: Int, y: Int) {
+		let node = SKNode()
+		node.position = CGPoint(x: x, y: y)
+
+		let firework = SKSpriteNode(imageNamed: "rocket")
+		firework.colorBlendFactor = 1
+		firework.name = "firework"
+		node.addChild(firework)
+
+		switch Int.random(in: 0...2) {
+		case 0:
+			firework.color = .cyan
+		case 1:
+			firework.color = .red
+		case 2:
+			firework.color = .green
+		default:
+			break
+		}
+
+		let path = UIBezierPath()
+		path.move(to: .zero)
+		path.addLine(to: CGPoint(x: xMovement, y: 1000))
+
+		let move = SKAction.follow(path.cgPath, asOffset: true, orientToPath: true, speed: 200)
+		node.run(move)
+
+		if let emitter = SKEmitterNode(fileNamed: "fuse") {
+			emitter.position = CGPoint(x: 0, y: -22)
+			node.addChild(emitter)
+		}
+
+		fireworks.append(node)
+		addChild(node)
+
 	}
 
 	func createFirework() {
