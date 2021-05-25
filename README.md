@@ -6,8 +6,8 @@
 
 ## Challenge
 
-1. <#Description#>
-2. <#Description#>
-3. <#Description#>
+1. Add a score label that updates as the player’s score changes.
+2. Make the game end after a certain number of launches. You will need to use the invalidate() method of Timer to stop it from repeating.
+3. Use the waitForDuration and removeFromParent actions in a sequence to make sure explosion particle emitters are removed from the game scene when they are finished.
 
 [1]: https://www.hackingwithswift.com/100/70
