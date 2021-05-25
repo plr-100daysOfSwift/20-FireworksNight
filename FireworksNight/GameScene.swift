@@ -19,9 +19,11 @@ class GameScene: SKScene {
 
 	var score = 0 {
 		didSet {
-
+			scoreLabel.text = "Score: \(score)"
 		}
 	}
+
+	var scoreLabel: SKLabelNode!
 
 	override func didMove(to view: SKView) {
 		let background = SKSpriteNode(imageNamed: "background")
@@ -29,6 +31,12 @@ class GameScene: SKScene {
 		background.blendMode = .replace
 		background.zPosition = -1
 		addChild(background)
+
+		scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
+		scoreLabel.fontSize = 48
+		scoreLabel.text = "Score: \(score)"
+		scoreLabel.position = CGPoint(x: 512, y: 20)
+		addChild(scoreLabel)
 
 		gameTimer = Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(launchFireworks), userInfo: nil, repeats: true)
 
