@@ -25,6 +25,15 @@ class GameScene: SKScene {
 
 	var scoreLabel: SKLabelNode!
 
+	let gameLength = 10
+	var launches = 0 {
+		didSet {
+			if launches == gameLength {
+				finishGame()
+			}
+		}
+	}
+
 	override func didMove(to view: SKView) {
 		let background = SKSpriteNode(imageNamed: "background")
 		background.position = CGPoint(x: 512, y: 384)
@@ -114,6 +123,7 @@ class GameScene: SKScene {
 		default:
 			break
 		}
+		launches += 1
 	}
 
 	func checkTouches(_ touches: Set<UITouch>) {
@@ -194,4 +204,18 @@ class GameScene: SKScene {
 		}
 	}
 
+	func finishGame() {
+		gameTimer?.invalidate()
+		let gameOverLabel = SKLabelNode(fontNamed: "Chalkduster")
+		gameOverLabel.fontSize = 64
+		gameOverLabel.position = CGPoint(x: 512, y: 384)
+		gameOverLabel.text = "Game over"
+		gameOverLabel.horizontalAlignmentMode = .center
+		gameOverLabel.alpha = 0
+		let wait = SKAction.wait(forDuration: 6)
+		let fadeIn = SKAction.fadeIn(withDuration: 0.8)
+		let sequence = SKAction.sequence([wait, fadeIn])
+		gameOverLabel.run(sequence)
+		addChild(gameOverLabel)
+	}
 }
